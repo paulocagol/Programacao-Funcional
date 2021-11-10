@@ -40,25 +40,25 @@ implementation
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin
-  Calculadora := TSoma.Create();
+  Calculadora := TSoma.New();
   Operacao();
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);
 begin
-  Calculadora := TSubtrair.Create();
+  Calculadora := TSubtrair.New();
   Operacao();
 end;
 
 procedure TForm1.Button3Click(Sender: TObject);
 begin
-  Calculadora := TDividir.Create();
+  Calculadora := TDividir.New();
   Operacao();
 end;
 
 procedure TForm1.Button4Click(Sender: TObject);
 begin
-  Calculadora := TMultiplicar.Create();
+  Calculadora := TMultiplicar.New();
   Operacao();
 end;
 
