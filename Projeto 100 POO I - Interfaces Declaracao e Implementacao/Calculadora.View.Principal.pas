@@ -43,42 +43,62 @@ implementation
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin
-  Edit3.Text :=  Calculadora
-    .Soma()
-    .Operacao(
-      Edit1.Text
-      , Edit1.Text
-    );
+  Edit3.Text := Calculadora
+    .Add(Edit1.Text)
+    .Add(Edit2.Text)
+    .Soma().Executar();
+
+//  Edit3.Text :=  Calculadora
+//    .Soma()
+//    .Operacao(
+//      Edit1.Text
+//      , Edit1.Text
+//    );
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);
 begin
   Edit3.Text := Calculadora
-    .Subtrair()
-    .Operacao(
-      Edit1.Text
-      , Edit1.Text
-    );
+    .Add(Edit1.Text)
+    .Add(Edit2.Text)
+    .Subtrair().Executar();
+
+//  Edit3.Text := Calculadora
+//    .Subtrair()
+//    .Operacao(
+//      Edit1.Text
+//      , Edit1.Text
+//    );
 end;
 
 procedure TForm1.Button3Click(Sender: TObject);
 begin
   Edit3.Text := Calculadora
-    .Dividir()
-    .Operacao(
-      Edit1.Text
-      , Edit1.Text
-    );
+    .Add(Edit1.Text)
+    .Add(Edit2.Text)
+    .Dividir().Executar();
+
+//  Edit3.Text := Calculadora
+//    .Dividir()
+//    .Operacao(
+//      Edit1.Text
+//      , Edit1.Text
+//    );
 end;
 
 procedure TForm1.Button4Click(Sender: TObject);
 begin
   Edit3.Text := Calculadora
-    .Multiplicar()
-    .Operacao(
-      Edit1.Text
-      , Edit1.Text
-    );
+    .Add(Edit1.Text)
+    .Add(Edit2.Text)
+    .Multiplicar().Executar();
+
+//  Edit3.Text := Calculadora
+//    .Multiplicar()
+//    .Operacao(
+//      Edit1.Text
+//      , Edit1.Text
+//    );
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
