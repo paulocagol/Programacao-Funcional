@@ -2,6 +2,9 @@ unit Classe.Calculadora;
 
 interface
 
+uses
+  Vcl.Controls;
+
 type
   iOperacoes = interface
     ['{5F27364B-FAEC-4838-8CFE-BC204D119EA0}']
@@ -16,6 +19,14 @@ type
    function Dividir: iOperacoes;
    function Multiplicar: iOperacoes;
   end;
+
+
+
+  TCaptionHelper = record helper for TCaption
+    function ToCurrency: Currency;
+  end;
+
+
 
   TCalculadora = class(TInterfacedObject, iCalculadora)
   private
@@ -204,6 +215,13 @@ end;
 function TCalculadora.Subtrair: iOperacoes;
 begin
   Result := TSubtrair.New();
+end;
+
+{ TCaptionHelper }
+
+function TCaptionHelper.ToCurrency: Currency;
+begin
+  Result := StrToCurr(Self);
 end;
 
 end.
