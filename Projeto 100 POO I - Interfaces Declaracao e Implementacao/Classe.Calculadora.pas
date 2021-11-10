@@ -3,41 +3,26 @@ unit Classe.Calculadora;
 interface
 
 type
-  iCalculadora = interface
+  iOperacoes = interface
     ['{5F27364B-FAEC-4838-8CFE-BC204D119EA0}']
     function Operacao(Num1, Num2: double): double;
   end;
 
 
-  TSoma = class(TInterfacedObject, iCalculadora)
-    function Operacao(Num1, Num2: double): double;
-  public
-    constructor Create();
-    destructor Destroy(); override;
-
-    class function New(): iCalculadora;
+  iCalculadora = interface
+   ['{E7A1CC56-45A6-43C5-B753-85883C2E5D75}']
+   function Soma: iOperacoes;
+   function Subtrair: iOperacoes;
+   function Dividir: iOperacoes;
+   function Multiplicar: iOperacoes;
   end;
 
-  TSubtrair = class(TInterfacedObject, iCalculadora)
-    function Operacao(Num1, Num2: double): double;
-  public
-    constructor Create();
-    destructor Destroy(); override;
-
-    class function New(): iCalculadora;
-  end;
-
-  TMultiplicar = class(TInterfacedObject, iCalculadora)
-    function Operacao(Num1, Num2: double): double;
-  public
-    constructor Create();
-    destructor Destroy(); override;
-
-    class function New(): iCalculadora;
-  end;
-
-  TDividir = class(TInterfacedObject, iCalculadora)
-    function Operacao(Num1, Num2: double): double;
+  TCalculadora = class(TInterfacedObject, iCalculadora)
+  private
+    function Soma: iOperacoes;
+    function Subtrair: iOperacoes;
+    function Dividir: iOperacoes;
+    function Multiplicar: iOperacoes;
   public
     constructor Create();
     destructor Destroy(); override;
@@ -46,8 +31,40 @@ type
   end;
 
 
-  TCalculadora = class
+  TSoma = class(TInterfacedObject, iOperacoes)
+    function Operacao(Num1, Num2: double): double;
+  public
+    constructor Create();
+    destructor Destroy(); override;
 
+    class function New(): iOperacoes;
+  end;
+
+  TSubtrair = class(TInterfacedObject, iOperacoes)
+    function Operacao(Num1, Num2: double): double;
+  public
+    constructor Create();
+    destructor Destroy(); override;
+
+    class function New(): iOperacoes;
+  end;
+
+  TMultiplicar = class(TInterfacedObject, iOperacoes)
+    function Operacao(Num1, Num2: double): double;
+  public
+    constructor Create();
+    destructor Destroy(); override;
+
+    class function New(): iOperacoes;
+  end;
+
+  TDividir = class(TInterfacedObject, iOperacoes)
+    function Operacao(Num1, Num2: double): double;
+  public
+    constructor Create();
+    destructor Destroy(); override;
+
+    class function New(): iOperacoes;
   end;
 
 implementation
@@ -68,7 +85,7 @@ begin
   inherited;
 end;
 
-class function TSoma.New: iCalculadora;
+class function TSoma.New: iOperacoes;
 begin
   Result := Self.Create();
 end;
@@ -92,7 +109,7 @@ begin
   inherited;
 end;
 
-class function TSubtrair.New: iCalculadora;
+class function TSubtrair.New: iOperacoes;
 begin
   Result := Self.Create();
 end;
@@ -115,7 +132,7 @@ begin
   inherited;
 end;
 
-class function TMultiplicar.New: iCalculadora;
+class function TMultiplicar.New: iOperacoes;
 begin
   Result := Self.Create();
 end;
@@ -138,7 +155,7 @@ begin
   inherited;
 end;
 
-class function TDividir.New: iCalculadora;
+class function TDividir.New: iOperacoes;
 begin
   Result := Self.Create();
 end;
@@ -149,6 +166,44 @@ begin
     raise Exception.Create('Valor inválido');
 
   Result := Num1 / Num2;
+end;
+
+{ TCalculadora }
+
+constructor TCalculadora.Create;
+begin
+
+end;
+
+destructor TCalculadora.Destroy;
+begin
+
+  inherited;
+end;
+
+function TCalculadora.Dividir: iOperacoes;
+begin
+  Result := TDividir.New();
+end;
+
+function TCalculadora.Multiplicar: iOperacoes;
+begin
+  Result := TMultiplicar.New();
+end;
+
+class function TCalculadora.New: iCalculadora;
+begin
+  Result := Self.Create();
+end;
+
+function TCalculadora.Soma: iOperacoes;
+begin
+  Result := TSoma.New();
+end;
+
+function TCalculadora.Subtrair: iOperacoes;
+begin
+  Result := TSubtrair.New();
 end;
 
 end.

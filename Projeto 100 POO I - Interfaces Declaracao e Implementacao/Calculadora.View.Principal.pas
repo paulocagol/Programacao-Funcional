@@ -15,6 +15,7 @@ type
     Button3: TButton;
     Button4: TButton;
     Edit3: TEdit;
+    procedure FormCreate(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
@@ -22,7 +23,6 @@ type
   private
     FCalculadora: iCalculadora;
     procedure SetCalculadora(const Value: iCalculadora);
-    procedure Operacao();
     { Private declarations }
   public
     { Public declarations }
@@ -38,38 +38,55 @@ implementation
 
 { TForm1 }
 
+{ TForm1 }
+
 procedure TForm1.Button1Click(Sender: TObject);
 begin
-  Calculadora := TSoma.New();
-  Operacao();
+  Edit3.Text := FloatToStr(
+    Calculadora
+      .Soma
+      .Operacao(
+        StrToCurr(Edit1.Text), StrToCurr(Edit1.Text)
+      )
+  );
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);
 begin
-  Calculadora := TSubtrair.New();
-  Operacao();
+  Edit3.Text := FloatToStr(
+    Calculadora
+      .Subtrair
+      .Operacao(
+        StrToCurr(Edit1.Text), StrToCurr(Edit1.Text)
+      )
+  );
 end;
 
 procedure TForm1.Button3Click(Sender: TObject);
 begin
-  Calculadora := TDividir.New();
-  Operacao();
+  Edit3.Text := FloatToStr(
+    Calculadora
+      .Dividir
+      .Operacao(
+        StrToCurr(Edit1.Text), StrToCurr(Edit1.Text)
+      )
+  );
 end;
 
 procedure TForm1.Button4Click(Sender: TObject);
 begin
-  Calculadora := TMultiplicar.New();
-  Operacao();
+  Edit3.Text := FloatToStr(
+    Calculadora
+      .Multiplicar
+      .Operacao(
+        StrToCurr(Edit1.Text), StrToCurr(Edit1.Text)
+      )
+  );
 end;
 
-procedure TForm1.Operacao;
+procedure TForm1.FormCreate(Sender: TObject);
 begin
-  Edit3.Text := FloatToStr(
-    Calculadora.Operacao(
-      StrToFloat(Edit1.Text)
-      , StrToFloat(Edit2.Text)
-    )
-  );
+  Calculadora := TCalculadora.New();
 end;
 
 procedure TForm1.SetCalculadora(const Value: iCalculadora);
