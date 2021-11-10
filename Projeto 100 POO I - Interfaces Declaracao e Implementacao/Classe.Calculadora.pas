@@ -8,7 +8,8 @@ uses
 type
   iOperacoes = interface
     ['{5F27364B-FAEC-4838-8CFE-BC204D119EA0}']
-    function Operacao(Num1, Num2: double): double;
+    function Operacao(Num1, Num2: double): double; overload;
+    function Operacao(Num1, Num2: String): String; overload;
   end;
 
 
@@ -23,6 +24,10 @@ type
 
 
   TCaptionHelper = record helper for TCaption
+    function ToCurrency: Currency;
+  end;
+
+  TStrHelper = record helper for String
     function ToCurrency: Currency;
   end;
 
@@ -43,7 +48,8 @@ type
 
 
   TSoma = class(TInterfacedObject, iOperacoes)
-    function Operacao(Num1, Num2: double): double;
+    function Operacao(Num1, Num2: double): double; overload;
+    function Operacao(Num1, Num2: String): String; overload;
   public
     constructor Create();
     destructor Destroy(); override;
@@ -52,7 +58,8 @@ type
   end;
 
   TSubtrair = class(TInterfacedObject, iOperacoes)
-    function Operacao(Num1, Num2: double): double;
+    function Operacao(Num1, Num2: double): double; overload;
+    function Operacao(Num1, Num2: String): String; overload;
   public
     constructor Create();
     destructor Destroy(); override;
@@ -61,7 +68,8 @@ type
   end;
 
   TMultiplicar = class(TInterfacedObject, iOperacoes)
-    function Operacao(Num1, Num2: double): double;
+    function Operacao(Num1, Num2: double): double; overload;
+    function Operacao(Num1, Num2: String): String; overload;
   public
     constructor Create();
     destructor Destroy(); override;
@@ -70,7 +78,8 @@ type
   end;
 
   TDividir = class(TInterfacedObject, iOperacoes)
-    function Operacao(Num1, Num2: double): double;
+    function Operacao(Num1, Num2: double): double; overload;
+    function Operacao(Num1, Num2: String): String; overload;
   public
     constructor Create();
     destructor Destroy(); override;
@@ -101,6 +110,11 @@ begin
   Result := Self.Create();
 end;
 
+function TSoma.Operacao(Num1, Num2: String): String;
+begin
+  Result := (Num1.ToCurrency + Num2.ToCurrency).ToString;
+end;
+
 function TSoma.Operacao(Num1, Num2: double): double;
 begin
   Result := Num1 + Num2;
@@ -123,6 +137,11 @@ end;
 class function TSubtrair.New: iOperacoes;
 begin
   Result := Self.Create();
+end;
+
+function TSubtrair.Operacao(Num1, Num2: String): String;
+begin
+  Result := (Num1.ToCurrency - Num2.ToCurrency).ToString;
 end;
 
 function TSubtrair.Operacao(Num1, Num2: double): double;
@@ -148,6 +167,11 @@ begin
   Result := Self.Create();
 end;
 
+function TMultiplicar.Operacao(Num1, Num2: String): String;
+begin
+  Result := (Num1.ToCurrency * Num2.ToCurrency).ToString;
+end;
+
 function TMultiplicar.Operacao(Num1, Num2: double): double;
 begin
   Result := Num1 * Num2;
@@ -169,6 +193,11 @@ end;
 class function TDividir.New: iOperacoes;
 begin
   Result := Self.Create();
+end;
+
+function TDividir.Operacao(Num1, Num2: String): String;
+begin
+  Result := (Num1.ToCurrency / Num2.ToCurrency).ToString;
 end;
 
 function TDividir.Operacao(Num1, Num2: double): double;
@@ -220,6 +249,13 @@ end;
 { TCaptionHelper }
 
 function TCaptionHelper.ToCurrency: Currency;
+begin
+  Result := StrToCurr(Self);
+end;
+
+{ TStrHelper }
+
+function TStrHelper.ToCurrency: Currency;
 begin
   Result := StrToCurr(Self);
 end;

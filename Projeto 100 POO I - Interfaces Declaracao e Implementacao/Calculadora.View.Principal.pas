@@ -45,9 +45,9 @@ begin
   Edit3.Text :=  Calculadora
     .Soma()
     .Operacao(
-      Edit1.Text.ToCurrency
-      , Edit1.Text.ToCurrency
-    ).ToString
+      Edit1.Text
+      , Edit1.Text
+    );
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);
@@ -55,9 +55,9 @@ begin
   Edit3.Text := Calculadora
     .Subtrair()
     .Operacao(
-      Edit1.Text.ToCurrency
-      , Edit1.Text.ToCurrency
-    ).ToString;
+      Edit1.Text
+      , Edit1.Text
+    );
 end;
 
 procedure TForm1.Button3Click(Sender: TObject);
@@ -65,9 +65,9 @@ begin
   Edit3.Text := Calculadora
     .Dividir()
     .Operacao(
-      Edit1.Text.ToCurrency
-      , Edit1.Text.ToCurrency
-    ).ToString;
+      Edit1.Text
+      , Edit1.Text
+    );
 end;
 
 procedure TForm1.Button4Click(Sender: TObject);
@@ -75,9 +75,9 @@ begin
   Edit3.Text := Calculadora
     .Multiplicar()
     .Operacao(
-      Edit1.Text.ToCurrency
-      , Edit1.Text.ToCurrency
-    ).ToString;
+      Edit1.Text
+      , Edit1.Text
+    );
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
