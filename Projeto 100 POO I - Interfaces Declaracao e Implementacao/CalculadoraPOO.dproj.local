@@ -4,10 +4,35 @@
     <Transaction>2021/11/08 11:33:49.000.087,=C:\Users\Paulo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2021/11/09 21:24:51.000.576,=C:\Users\Paulo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2021/11/09 21:31:11.000.835,=C:\Users\Paulo\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
-    <Transaction>2021/11/09 21:32:09.000.260,C:\Users\Paulo\Documents\Workspace\DUP2.0\Programação Funcional\Projeto 100% POO I - Interfaces Declaração e Implementação\Classe.Clalculadora.pas=C:\Users\Paulo\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
-    <Transaction>2021/11/09 21:32:31.000.045,C:\Users\Paulo\Documents\Workspace\DUP2.0\Programação Funcional\Projeto 100% POO I - Interfaces Declaração e Implementação\Calculadora.View.Principal.dfm=C:\Users\Paulo\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2021/11/09 21:32:31.000.045,C:\Users\Paulo\Documents\Workspace\DUP2.0\Programação Funcional\Projeto 100% POO I - Interfaces Declaração e Implementação\Calculadora.View.Principal.pas=C:\Users\Paulo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2021/11/09 21:32:36.000.540,C:\Users\Paulo\Documents\Workspace\DUP2.0\Programação Funcional\Projeto 100% POO I - Interfaces Declaração e Implementação\CalculadoraPOO.dproj=C:\Users\Paulo\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
-    <Transaction>2021/11/09 21:37:49.000.563,C:\Users\Paulo\Documents\Workspace\DUP2.0\Programação Funcional\Projeto 100% POO I - Interfaces Declaração e Implementação\Classe.Calculadora.pas=C:\Users\Paulo\Documents\Workspace\DUP2.0\Programação Funcional\Projeto 100% POO I - Interfaces Declaração e Implementação\Classe.Clalculadora.pas</Transaction>
-  </Transactions>
+    <Transaction>2021/11/09 21:32:09.000.260,C:\Users\Paulo\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\Paulo\Documents\Workspace\DUP2.0\Programação Funcional\Projeto 100% POO I - Interfaces Declaração e Implementação\Classe.Clalculadora.pas</Transaction>
+    <Transaction>2021/11/09 21:32:31.000.045,C:\Users\Paulo\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Paulo\Documents\Workspace\DUP2.0\Programação Funcional\Projeto 100% POO I - Interfaces Declaração e Implementação\Calculadora.View.Principal.pas</Transaction>
+    <Transaction>2021/11/09 21:32:31.000.045,C:\Users\Paulo\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\Paulo\Documents\Workspace\DUP2.0\Programação Funcional\Projeto 100% POO I - Interfaces Declaração e Implementação\Calculadora.View.Principal.dfm</Transaction>
+    <Transaction>2021/11/09 21:32:36.000.540,C:\Users\Paulo\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\Paulo\Documents\Workspace\DUP2.0\Programação Funcional\Projeto 100% POO I - Interfaces Declaração e Implementação\CalculadoraPOO.dproj</Transaction>
+    <Transaction>2021/11/09 21:37:49.000.563,C:\Users\Paulo\Documents\Workspace\DUP2.0\Programação Funcional\Projeto 100% POO I - Interfaces Declaração e Implementação\Classe.Clalculadora.pas=C:\Users\Paulo\Documents\Workspace\DUP2.0\Programação Funcional\Projeto 100% POO I - Interfaces Declaração e Implementação\Classe.Calculadora.pas</Transaction>
+    <Transaction>2021/11/09 22:47:38.450,=C:\Users\Paulo\Documents\Workspace\DUP2.0\Programação Funcional\Projeto 100 POO I - Interfaces Declaracao e Implementacao\Unit1.pas</Transaction>
+    <Transaction>2021/11/09 22:48:00.345,C:\Users\Paulo\Documents\Workspace\DUP2.0\Programação Funcional\Projeto 100 POO I - Interfaces Declaracao e Implementacao\Calculadora.Interfaces.pas=C:\Users\Paulo\Documents\Workspace\DUP2.0\Programação Funcional\Projeto 100 POO I - Interfaces Declaracao e Implementacao\Unit1.pas</Transaction>
+    <Transaction>2021/11/09 22:48:19.894,=C:\Users\Paulo\Documents\Workspace\DUP2.0\Programação Funcional\Projeto 100 POO I - Interfaces Declaracao e Implementacao\Unit1.pas</Transaction>
+    <Transaction>2021/11/09 22:48:28.584,C:\Users\Paulo\Documents\Workspace\DUP2.0\Programação Funcional\Projeto 100 POO I - Interfaces Declaracao e Implementacao\Calculadora.Helper.pas=C:\Users\Paulo\Documents\Workspace\DUP2.0\Programação Funcional\Projeto 100 POO I - Interfaces Declaracao e Implementacao\Unit1.pas</Transaction>
+    <Transaction>2021/11/09 22:49:12.800,=C:\Users\Paulo\Documents\Workspace\DUP2.0\Programação Funcional\Projeto 100 POO I - Interfaces Declaracao e Implementacao\Unit1.pas</Transaction>
+    <Transaction>2021/11/09 22:52:42.371,C:\Users\Paulo\Documents\Workspace\DUP2.0\Programação Funcional\Projeto 100 POO I - Interfaces Declaracao e Implementacao\Calculadora.Soma.pas=C:\Users\Paulo\Documents\Workspace\DUP2.0\Programação Funcional\Projeto 100 POO I - Interfaces Declaracao e Implementacao\Unit1.pas</Transaction>
+    <Transaction>2021/11/09 22:54:36.683,=C:\Users\Paulo\Documents\Workspace\DUP2.0\Programação Funcional\Projeto 100 POO I - Interfaces Declaracao e Implementacao\Unit1.pas</Transaction>
+    <Transaction>2021/11/09 22:54:49.374,C:\Users\Paulo\Documents\Workspace\DUP2.0\Programação Funcional\Projeto 100 POO I - Interfaces Declaracao e Implementacao\Calculadora.Subtrair.pas=C:\Users\Paulo\Documents\Workspace\DUP2.0\Programação Funcional\Projeto 100 POO I - Interfaces Declaracao e Implementacao\Unit1.pas</Transaction>
+    <Transaction>2021/11/09 22:55:19.368,=C:\Users\Paulo\Documents\Workspace\DUP2.0\Programação Funcional\Projeto 100 POO I - Interfaces Declaracao e Implementacao\Unit1.pas</Transaction>
+    <Transaction>2021/11/09 22:55:28.595,C:\Users\Paulo\Documents\Workspace\DUP2.0\Programação Funcional\Projeto 100 POO I - Interfaces Declaracao e Implementacao\Calculadora.Multiplicar.pas=C:\Users\Paulo\Documents\Workspace\DUP2.0\Programação Funcional\Projeto 100 POO I - Interfaces Declaracao e Implementacao\Unit1.pas</Transaction>
+    <Transaction>2021/11/09 23:18:31.370,=C:\Users\Paulo\Documents\Workspace\DUP2.0\Programação Funcional\Projeto 100 POO I - Interfaces Declaracao e Implementacao\Unit1.pas</Transaction>
+    <Transaction>2021/11/09 23:18:42.287,C:\Users\Paulo\Documents\Workspace\DUP2.0\Programação Funcional\Projeto 100 POO I - Interfaces Declaracao e Implementacao\Calculadora.Dividir.pas=C:\Users\Paulo\Documents\Workspace\DUP2.0\Programação Funcional\Projeto 100 POO I - Interfaces Declaracao e Implementacao\Unit1.pas</Transaction>
+    <Transaction>2021/11/09 23:52:15.743,=C:\Users\Paulo\Documents\Workspace\DUP2.0\Programação Funcional\Projeto 100 POO I - Interfaces Declaracao e Implementacao\Unit1.pas</Transaction>
+    <Transaction>2021/11/09 23:52:27.327,C:\Users\Paulo\Documents\Workspace\DUP2.0\Programação Funcional\Projeto 100 POO I - Interfaces Declaracao e Implementacao\Calculadora.Operacoes.pas=C:\Users\Paulo\Documents\Workspace\DUP2.0\Programação Funcional\Projeto 100 POO I - Interfaces Declaracao e Implementacao\Unit1.pas</Transaction>
+  </Transactions>  <ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Calculadora.Dividir.pas"/>
+    <File Path="Calculadora.Helper.pas"/>
+    <File Path="Calculadora.Interfaces.pas"/>
+    <File Path="Calculadora.Multiplicar.pas"/>
+    <File Path="Calculadora.Soma.pas"/>
+    <File Path="Calculadora.Subtrair.pas"/>
+    <File Path="Calculadora.View.Principal.pas"/>
+    <File Path="Calculadora.View.Principal.dfm"/>
+    <File Path="Classe.Calculadora.pas"/>
+    <File Path="Calculadora.Operacoes.pas"/>
+  </ProjectSortOrder>
 </BorlandProject>

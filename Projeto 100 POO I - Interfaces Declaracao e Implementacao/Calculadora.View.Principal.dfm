@@ -14,6 +14,13 @@ object Form1: TForm1
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
+  object Label1: TLabel
+    Left = 279
+    Top = 35
+    Width = 121
+    Height = 17
+    Caption = 'Label1'
+  end
   object Edit1: TEdit
     Left = 8
     Top = 8

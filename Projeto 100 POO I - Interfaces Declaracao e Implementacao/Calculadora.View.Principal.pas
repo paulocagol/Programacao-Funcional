@@ -16,6 +16,7 @@ type
     Button3: TButton;
     Button4: TButton;
     Edit3: TEdit;
+    Label1: TLabel;
     procedure FormCreate(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
@@ -23,11 +24,10 @@ type
     procedure Button4Click(Sender: TObject);
   private
     FCalculadora: iCalculadora;
-    procedure SetCalculadora(const Value: iCalculadora);
-    { Private declarations }
+    procedure ExibeResultado(Value: String);
+    procedure ExibeResultadoLabel(Value: String);
   public
-    { Public declarations }
-    property Calculadora: iCalculadora read FCalculadora write SetCalculadora;
+    property Calculadora: iCalculadora read FCalculadora write FCalculadora;
   end;
 
 var
@@ -43,10 +43,20 @@ implementation
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin
-  Edit3.Text := Calculadora
+  Calculadora
     .Add(Edit1.Text)
     .Add(Edit2.Text)
-    .Soma().Executar();
+    .Soma()
+      .Display()
+        .Resultado(ExibeResultadoLabel)
+      .EndDisplay()
+    .Executar();
+
+//  Edit3.Text := Calculadora
+//    .Add(Edit1.Text)
+//    .Add(Edit2.Text)
+//    .Soma()
+//    .Executar();
 
 //  Edit3.Text :=  Calculadora
 //    .Soma()
@@ -58,10 +68,17 @@ end;
 
 procedure TForm1.Button2Click(Sender: TObject);
 begin
-  Edit3.Text := Calculadora
+  Calculadora
     .Add(Edit1.Text)
     .Add(Edit2.Text)
-    .Subtrair().Executar();
+    .Subtrair()
+    .Executar();
+
+//  Edit3.Text := Calculadora
+//    .Add(Edit1.Text)
+//    .Add(Edit2.Text)
+//    .Subtrair()
+//    .Executar();
 
 //  Edit3.Text := Calculadora
 //    .Subtrair()
@@ -73,10 +90,16 @@ end;
 
 procedure TForm1.Button3Click(Sender: TObject);
 begin
-  Edit3.Text := Calculadora
+  Calculadora
     .Add(Edit1.Text)
     .Add(Edit2.Text)
-    .Dividir().Executar();
+    .Dividir()
+    .Executar();
+
+//  Edit3.Text := Calculadora
+//    .Add(Edit1.Text)
+//    .Add(Edit2.Text)
+//    .Dividir().Executar();
 
 //  Edit3.Text := Calculadora
 //    .Dividir()
@@ -88,10 +111,16 @@ end;
 
 procedure TForm1.Button4Click(Sender: TObject);
 begin
-  Edit3.Text := Calculadora
+  Calculadora
     .Add(Edit1.Text)
     .Add(Edit2.Text)
-    .Multiplicar().Executar();
+    .Multiplicar()
+    .Executar();
+
+//  Edit3.Text := Calculadora
+//    .Add(Edit1.Text)
+//    .Add(Edit2.Text)
+//    .Multiplicar().Executar();
 
 //  Edit3.Text := Calculadora
 //    .Multiplicar()
@@ -101,14 +130,23 @@ begin
 //    );
 end;
 
-procedure TForm1.FormCreate(Sender: TObject);
+procedure TForm1.ExibeResultado(Value: String);
 begin
-  Calculadora := TCalculadora.New();
+  Edit3.Text := value;
 end;
 
-procedure TForm1.SetCalculadora(const Value: iCalculadora);
+procedure TForm1.ExibeResultadoLabel(Value: String);
 begin
-  FCalculadora := Value;
+  Label1.Caption := Value;
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  Calculadora :=
+    TCalculadora.New()
+      .Display
+        .Resultado(ExibeResultado)
+      .EndDisplay();
 end;
 
 end.
